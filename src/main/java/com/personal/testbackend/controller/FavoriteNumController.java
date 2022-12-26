@@ -12,38 +12,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.personal.testbackend.service.ToReadService;
-import com.personal.testbackend.data.ToRead;
+import com.personal.testbackend.data.FavoriteNum;
+import com.personal.testbackend.service.FavoriteNumService;
 
 @RestController
-@RequestMapping("/api/toread")
-public class ToReadController {
+@RequestMapping("/api/favnum")
+public class FavoriteNumController {
     @Autowired
-    private ToReadService toReadService;
+    private FavoriteNumService favoriteNumService;
 
     @GetMapping
-    public List<ToRead> getAll(){
-        return toReadService.getAll();
+    public List<FavoriteNum> getAll(){
+        return favoriteNumService.getAll();
     }
 
     @GetMapping("/{id}")
-    public ToRead getById(@PathVariable String id){
-        return toReadService.getById(id);
+    public FavoriteNum getById(@PathVariable String id){
+        return favoriteNumService.getById(id);
     }
 
     @PostMapping
-    public ToRead create(@RequestBody ToRead toRead){
-        return toReadService.save(toRead);
+    public FavoriteNum create(@RequestBody FavoriteNum favoriteNum){
+        return favoriteNumService.save(favoriteNum);
     }
 
     @PutMapping("/{id}")
-    public ToRead update(@RequestBody ToRead toRead){
-        return toReadService.save(toRead);
+    public FavoriteNum update(@RequestBody FavoriteNum favoriteNum){
+        return favoriteNumService.save(favoriteNum);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteById(@PathVariable String id){
-        toReadService.deleteById(id);
+    public void delete(@PathVariable String id){
+        favoriteNumService.deleteById(id);
     }
 }
-
