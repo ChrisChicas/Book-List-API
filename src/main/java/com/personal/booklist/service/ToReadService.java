@@ -1,13 +1,13 @@
-package com.personal.testbackend.service;
+package com.personal.booklist.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.personal.testbackend.repository.ToReadRepository;
-import com.personal.testbackend.data.ToRead;
-import com.personal.testbackend.exception.EntityNotFoundException;
+import com.personal.booklist.data.ToRead;
+import com.personal.booklist.exception.EntityNotFoundException;
+import com.personal.booklist.repository.ToReadRepository;
 
 @Service
 public class ToReadService {

@@ -1,4 +1,4 @@
-package com.personal.testbackend.data;
+package com.personal.booklist.data;
 
 import org.springframework.data.annotation.Id;
 

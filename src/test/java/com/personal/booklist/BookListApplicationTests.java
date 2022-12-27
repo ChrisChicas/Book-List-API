@@ -1,10 +1,10 @@
-package com.personal.testbackend;
+package com.personal.booklist;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TestBackEndApplicationTests {
+class BookListApplicationTests {
 
 	@Test
 	void contextLoads() {
